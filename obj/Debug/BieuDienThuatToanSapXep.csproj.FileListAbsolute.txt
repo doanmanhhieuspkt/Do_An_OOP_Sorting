@@ -1,0 +1,10 @@
+C:\Users\plasm\source\repos\DoAnOOP\DoAnOOP\bin\Debug\DoAnOOP.exe.config
+C:\Users\plasm\source\repos\DoAnOOP\DoAnOOP\bin\Debug\DoAnOOP.exe
+C:\Users\plasm\source\repos\DoAnOOP\DoAnOOP\bin\Debug\DoAnOOP.pdb
+C:\Users\plasm\source\repos\DoAnOOP\DoAnOOP\obj\Debug\BieuDienThuatToanSapXep.csprojAssemblyReference.cache
+C:\Users\plasm\source\repos\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.Properties.Resources.resources
+C:\Users\plasm\source\repos\DoAnOOP\DoAnOOP\obj\Debug\BieuDienThuatToanSapXep.csproj.GenerateResource.cache
+C:\Users\plasm\source\repos\DoAnOOP\DoAnOOP\obj\Debug\BieuDienThuatToanSapXep.csproj.CoreCompileInputs.cache
+C:\Users\plasm\source\repos\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.exe
+C:\Users\plasm\source\repos\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.pdb
+C:\Users\plasm\source\repos\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.Form1.resources
