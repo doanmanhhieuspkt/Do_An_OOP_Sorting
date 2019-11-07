@@ -77,7 +77,7 @@ namespace DoAnOOP
         public static bool operator <=(IntRectangle a, IntRectangle b)
         {
             onComparisions();
-            return a.value > b.value;
+            return a.value <= b.value;
         }
         public static bool operator ==(IntRectangle a, IntRectangle b)
         {
