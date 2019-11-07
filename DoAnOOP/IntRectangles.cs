@@ -87,7 +87,6 @@ namespace DoAnOOP
             {
                 j = i - 1;
                 t = this[i];
-                IntRectangle a;
                 while (j >= 0 && t < this[j])
                 {
                    // intRectangles[j].Fill(Color.White);
