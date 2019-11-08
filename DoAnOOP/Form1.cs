@@ -34,6 +34,12 @@ namespace DoAnOOP
             try
             {
                 Length = int.Parse(txbLength.Text.ToString());
+                if (Length >618 )
+                {
+                    MessageBox.Show("Length=618");
+                    Length = 618;
+                    txbLength.Text = 618.ToString();
+                }
                 A = new int[Length];
                 
                 IntRectangle.Width = (pnlPain.Width - 2*IntRectangle.Padding) / A.Length;
@@ -111,11 +117,12 @@ namespace DoAnOOP
             }
             intRectangles = new IntRectangles(A);
             IntRectangle.Sleep = trbSleep.Value;
-            intRectangles.FillIntRectangles();
             if (isHuy)
             {
                 thread.Abort();
             }
+            IntRectangle.Graphics.Clear(IntRectangle.IrbackgourdColor);
+            intRectangles.FillIntRectangles();
             btnPause.Text = "Pause";
             btnSort.Enabled = true;
             intRectangles.IsALive = false;

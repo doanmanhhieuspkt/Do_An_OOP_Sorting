@@ -109,6 +109,8 @@
             this.txbLength.Name = "txbLength";
             this.txbLength.Size = new System.Drawing.Size(75, 20);
             this.txbLength.TabIndex = 6;
+            this.txbLength.Text = "2->618";
+            this.txbLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnCreaterArray
             // 

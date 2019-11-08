@@ -41,8 +41,8 @@ namespace DoAnOOP
         {
             for (int i = 0; i < intRectangles.Length; i++)
             {
-                Thread.Sleep(1);
-                intRectangles[i].Fill(Color.Yellow);
+               
+                intRectangles[i].Fill(Color.Yellow,1);
             }
         }
         public IntRectangle this[int index]

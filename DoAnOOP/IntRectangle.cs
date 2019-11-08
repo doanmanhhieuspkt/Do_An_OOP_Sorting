@@ -47,7 +47,7 @@ namespace DoAnOOP
             comparisons++;
        
 
-            Label.Text = comparisons + " comparisons, " + arrayaccesses + " array accesses";
+              Label.Text = comparisons + " comparisons, " + arrayaccesses + " array accesses";
      
         }
         public void Fill()
@@ -58,6 +58,11 @@ namespace DoAnOOP
         public void Fill(Color color)
         {
             isColor = color;
+            graphics.FillRectangle(new SolidBrush(color), this.rectangle);
+        }
+        public void Fill(Color color,int asleep)
+        {
+            Thread.Sleep(asleep);
             graphics.FillRectangle(new SolidBrush(color), this.rectangle);
         }
         public static bool operator < (IntRectangle a,IntRectangle b)
