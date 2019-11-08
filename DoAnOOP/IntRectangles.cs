@@ -41,6 +41,7 @@ namespace DoAnOOP
         {
             for (int i = 0; i < intRectangles.Length; i++)
             {
+                Thread.Sleep(1);
                 intRectangles[i].Fill(Color.Yellow);
             }
         }
@@ -50,6 +51,10 @@ namespace DoAnOOP
             {
                 IntRectangle.Arrayaccesses++;
                 IntRectangle.Label.Text = IntRectangle.Comparisons + " comparisons, " + IntRectangle.Arrayaccesses + " array accesses";
+                Color color = intRectangles[index].IsColor;
+                intRectangles[index].Fill(Color.White);
+                Thread.Sleep(IntRectangle.Sleep);
+                intRectangles[index].Fill(color);
                 return intRectangles[index];
             }
 
@@ -139,6 +144,7 @@ namespace DoAnOOP
                    IntRectangle.Swap(ref intRectangles[i],ref intRectangles[j]);
                 }
                 intRectangles[low].Fill(quickColor);
+
                 intRectangles[high].Fill(quickColor);
             }
             IntRectangle.Swap(ref intRectangles[i+1], ref intRectangles[high]);

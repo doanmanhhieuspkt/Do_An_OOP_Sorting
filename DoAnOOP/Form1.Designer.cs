@@ -124,7 +124,7 @@
             // 
             this.trbSleep.BackColor = System.Drawing.SystemColors.GrayText;
             this.trbSleep.Location = new System.Drawing.Point(729, 602);
-            this.trbSleep.Maximum = 50;
+            this.trbSleep.Maximum = 1000;
             this.trbSleep.Name = "trbSleep";
             this.trbSleep.Size = new System.Drawing.Size(104, 45);
             this.trbSleep.TabIndex = 8;

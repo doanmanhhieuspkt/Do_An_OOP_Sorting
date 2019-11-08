@@ -25,7 +25,7 @@ namespace DoAnOOP
         private static Color irColor = Color.Red;
         private static Color irbackgourdColor = SystemColors.GrayText;
         private static Color ircolorSwap = Color.Blue;
-       
+        private Color isColor = Color.Red;
 
         public IntRectangle(int value, int i)
         {
@@ -52,11 +52,12 @@ namespace DoAnOOP
         }
         public void Fill()
         {
+            isColor = Color.Red;
             graphics.FillRectangle(new SolidBrush(irColor), this.rectangle);
         }
         public void Fill(Color color)
         {
-            Thread.Sleep(1);
+            isColor = color;
             graphics.FillRectangle(new SolidBrush(color), this.rectangle);
         }
         public static bool operator < (IntRectangle a,IntRectangle b)
@@ -91,6 +92,7 @@ namespace DoAnOOP
         }
         public static void Set(ref IntRectangle a,ref IntRectangle  b)
         {
+           
             graphics.FillRectangle(new SolidBrush(irbackgourdColor), a.rectangle);
             Thread.Sleep(sleep);
             a = new IntRectangle(b.value,a.mindex);
@@ -99,7 +101,9 @@ namespace DoAnOOP
         }
         public static void Swap(ref IntRectangle  i,ref IntRectangle j)
         {
+            
             graphics.FillRectangle(new SolidBrush(ircolorSwap), i.rectangle);
+
             graphics.FillRectangle(new SolidBrush(ircolorSwap), j.rectangle);
             Thread.Sleep(sleep);
             graphics.FillRectangle(new SolidBrush(irbackgourdColor), i.rectangle);
@@ -121,6 +125,6 @@ namespace DoAnOOP
         public static int Sleep { get => sleep; set => sleep = value; }
         public static long Comparisons { get => comparisons; set => comparisons = value; }
         public static long Arrayaccesses { get => arrayaccesses; set => arrayaccesses = value; }
-
+        public Color IsColor { get => isColor; set => isColor = value; }
     }
 }
