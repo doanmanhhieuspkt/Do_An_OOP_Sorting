@@ -35,20 +35,24 @@ namespace DemoSort
         public static int WightPanel { get => Panel.Width;}
         public static Panel Panel { get => panel; set => panel = value; }
         public static int PaddingBotPanel { get => paddingBotPanel; set => paddingBotPanel = value; }
+        public static bool IsHuy { get => isHuy; set => isHuy = value; }
 
+        private static bool isHuy;
         public static void onComparisions()
         {
             comparisons++;
 
-            if (ac != null)
+          
                 ac.Text = comparisons + " comparisons, " + arrayaccesses + " array accesses";
+           
 
         }
         public static void onArrayaccesses()
         {
             arrayaccesses++;
-            if (ac != null)
+           
                 ac.Text = comparisons + " comparisons, " + arrayaccesses + " array accesses";
+           
 
         }
     }

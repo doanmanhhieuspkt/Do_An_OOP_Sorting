@@ -85,6 +85,7 @@ namespace DemoSort
 
             }
             intButtons[0].BackColor = Color.Yellow;
+            ThongSo.IsAlive = false;
         }
         public void InsertionSort()
         {
@@ -120,6 +121,7 @@ namespace DemoSort
                 Thread.Sleep(ThongSo.Sleep);
                
             }
+            ThongSo.IsAlive = false;
         }
         private int partition(int low, int high)
         {
@@ -182,6 +184,7 @@ namespace DemoSort
         public void QuickSort()
         {
             quickSort(0, intButtons.Length - 1);
+            ThongSo.IsAlive = false;
         }
         public void ShellSort()
         {
@@ -226,7 +229,7 @@ namespace DemoSort
                     Thread.Sleep(ThongSo.Sleep);
                 }
             }
-
+            ThongSo.IsAlive = false;
             //isALive = false;
 
         }
@@ -353,6 +356,7 @@ namespace DemoSort
         public void MergeSort()
         {
             mergeSort(0, intButtons.Length-1);
+            ThongSo.IsAlive = false;
         }
         private void heapify(int n, int i)
         {
@@ -407,6 +411,7 @@ namespace DemoSort
                 intButtons[0].BackColor = ThongSo.clIntButton;
                 heapify(i, 0);
             }
+            ThongSo.IsAlive = false;
         }
         public void HeapSort()
         {
@@ -457,7 +462,7 @@ namespace DemoSort
             }
 
             intButtons[intButtons.Length - 1].BackColor = Color.Yellow;
-
+            ThongSo.IsAlive = false;
         }
 
     }

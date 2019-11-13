@@ -95,6 +95,7 @@ namespace DemoSort
             Color tBackColor= a.BackColor;
             int tValue = a.value;
             Size tSize = a.Size;
+          
             a.Location = new Point(a.Location.X, b.Location.Y);
             a.Text = b.Text;
             a.Size = b.Size;

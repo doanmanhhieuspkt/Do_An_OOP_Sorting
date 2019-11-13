@@ -14,15 +14,17 @@ namespace DemoSort
     {
         private IntButtons IntButtons;
         private bool isTaoMang = false;
-        private bool isHuy = false;
+      //  private bool isHuy = false;
         private int[] A;
         private Thread thread;
         public Form1()
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+            ThongSo.IsHuy = false;
             ThongSo.Ac = ac;
             ThongSo.Panel = this.panel1;
+           
         }
         private void Form1_load(object sender, EventArgs e)
         {
@@ -103,11 +105,13 @@ namespace DemoSort
             txbLength.Text = A.Length.ToString();
             if(IntButtons!=null)
                 IntButtons.Del();
-            if (isHuy)
+            if (ThongSo.IsHuy)
             {
                 thread.Abort();
             }
             btnStop.Text = "Pause";
+            ThongSo.IsAlive = false;
+            ThongSo.IsHuy = false;
             btnSort.Enabled = true;
             lblDemoSort.Text = "DEMO SORTING ALGORITHM";
             IntButtons = new IntButtons(A);
@@ -126,6 +130,7 @@ namespace DemoSort
             {
                 lblDemoSort.Text = "          Bubbler Sort";
                 thread = new Thread(IntButtons.BubbleSort);
+              
             }
             if (rdInsertion.Checked)
             {
@@ -158,8 +163,8 @@ namespace DemoSort
                 thread = new Thread(IntButtons.selectionSort);
             }
             thread.IsBackground = true;
-            isHuy = true;
-            ThongSo.IsAlive = true;
+            ThongSo.IsHuy = true;
+           ThongSo.IsAlive = true;
             thread.Start();
         }
 
@@ -197,19 +202,19 @@ namespace DemoSort
 
         private void BtnPause_Click(object sender, EventArgs e)
         {
-            if (thread.IsAlive)
+            if (ThongSo.IsAlive)
             {
                 if (btnStop.Text.ToString() == "Pause")
                 {
                     thread.Suspend();
-                    isHuy = false;
+                    ThongSo.IsHuy = false;
                     btnStop.Text = "Continue";
                 }
-                else
+                else 
                 {
                     thread.Resume();
                     btnStop.Text = "Pause";
-                    isHuy = true;
+                    ThongSo.IsHuy = true;
                 }
             }
 
