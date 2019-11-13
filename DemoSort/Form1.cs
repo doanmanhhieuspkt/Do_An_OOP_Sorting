@@ -20,7 +20,7 @@ namespace DemoSort
         public Form1()
         {
             InitializeComponent();
-            
+            CheckForIllegalCrossThreadCalls = false;
             ThongSo.Ac = ac;
             ThongSo.Panel = this.panel1;
         }
